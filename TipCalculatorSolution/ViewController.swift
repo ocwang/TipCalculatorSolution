@@ -9,11 +9,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    fileprivate var isDefaultStatusBar = true
+    private var isDefaultStatusBar = true
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return isDefaultStatusBar ? .default : .lightContent
@@ -36,9 +36,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalCostLabel: UILabel!
     
     @IBOutlet weak var resetButton: UIButton!
-    
-    // MARK: - VC Lifecycle
-    
+}
+
+// MARK: - VC Lifecycle
+
+extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,25 +52,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    @IBAction func themeToggled(_ sender: UISwitch) {
-        setTheme(isDark: sender.isOn)
-    }
-    
-    @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
-        calculate()
-    }
-    
-    @IBAction func resetButtonTapped(_ sender: UIButton) {
-        clear()
-    }
-}
-
-// MARK: - Styling / Theming
-
-extension ViewController {
-    func setupView() {
+    private func setupView() {
         headerView.layer.shadowOffset = CGSize(width: 0, height: 1)
         headerView.layer.shadowOpacity = 0.05
         headerView.layer.shadowColor = UIColor.black.cgColor
@@ -84,8 +68,28 @@ extension ViewController {
         resetButton.layer.cornerRadius = 8
         resetButton.layer.masksToBounds = true
     }
+}
+
+// MARK: - IBActions
+
+extension ViewController {
+    @IBAction func themeToggled(_ sender: UISwitch) {
+        setTheme(isDark: sender.isOn)
+    }
     
-    func setTheme(isDark: Bool) {
+    @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
+        calculate()
+    }
+    
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        clear()
+    }
+}
+
+// MARK: - Theming
+
+extension ViewController {
+    private func setTheme(isDark: Bool) {
         let theme = isDark ? ColorTheme.dark : ColorTheme.light
         
         view.backgroundColor = theme.viewControllerBackgroundColor
@@ -114,16 +118,10 @@ extension ViewController {
     }
 }
 
-// MARK: - IBActions
-
-extension ViewController {
-    
-}
-
 // MARK: - Logic
 
 extension ViewController {
-    func calculate() {
+    private func calculate() {
         if billAmountTextField.isFirstResponder {
             billAmountTextField.resignFirstResponder()
         }
@@ -157,7 +155,7 @@ extension ViewController {
         totalCostLabel.text = String(format: "%.2f", totalAmount)
     }
     
-    func clear(resetTipPercent: Bool = true) {
+    private func clear(resetTipPercent: Bool = true) {
         billAmountTextField.text = nil
         
         // update UI

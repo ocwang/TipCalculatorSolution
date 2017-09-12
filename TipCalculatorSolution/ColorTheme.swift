@@ -35,6 +35,7 @@ struct ColorTheme {
     
     let primaryColor: UIColor
     let primaryTextColor: UIColor
+    
     let secondaryColor: UIColor
     
     let accentColor: UIColor

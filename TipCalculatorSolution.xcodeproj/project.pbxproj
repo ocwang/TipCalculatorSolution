@@ -61,10 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				CA38196D1F668A28007C953C /* AppDelegate.swift */,
-				CAA5D4811F66AFB4005B223A /* Main.storyboard */,
 				CA38196F1F668A28007C953C /* ViewController.swift */,
 				CAA5D4881F66B16B005B223A /* ColorTheme.swift */,
 				CAA5D48C1F66B1C2005B223A /* BillAmountTextField.swift */,
+				CAA5D4811F66AFB4005B223A /* Main.storyboard */,
 				CA3819741F668A28007C953C /* Assets.xcassets */,
 				CAA5D4861F66AFCB005B223A /* Supporting Files */,
 			);
@@ -295,11 +295,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QXSA84SJDA;
 				INFOPLIST_FILE = "$(SRCROOT)/TipCalculatorSolution/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.TipCalculatorSolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,11 +310,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QXSA84SJDA;
 				INFOPLIST_FILE = "$(SRCROOT)/TipCalculatorSolution/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.TipCalculatorSolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
