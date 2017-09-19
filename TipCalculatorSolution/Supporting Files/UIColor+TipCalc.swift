@@ -9,62 +9,46 @@
 import UIKit.UIColor
 
 extension UIColor {
-    /*
-     * Converts hex integer into UIColor
-     *
-     * Usage: UIColor(hex: 0xFFFFFF)
-     *
-     */
-    
-    private convenience init(hex: Int) {
-        let components = (
-            R: CGFloat((hex >> 16) & 0xff) / 255,
-            G: CGFloat((hex >> 08) & 0xff) / 255,
-            B: CGFloat((hex >> 00) & 0xff) / 255
-        )
-        
-        self.init(red: components.R, green: components.G, blue: components.B, alpha: 1)
-    }
     
     // MARK: Brand Colors
     
-    static var tcSadBlue: UIColor {
-        return UIColor(hex: 0x2B2D5C)
+    static var tcDarkBlue: UIColor {
+        return UIColor(named: "tcDarkBlue")!
     }
     
     static var tcOffWhite: UIColor {
-        return UIColor(hex: 0xF7F7F7)
+        return UIColor(named: "tcOffWhite")!
     }
     
-    static var tcHotMessPink: UIColor {
-        return UIColor(hex: 0xFA5385)
+    static var tcHotPink: UIColor {
+        return UIColor(named: "tcHotPink")!
     }
     
-    static var tcOffBlack: UIColor {
-        return UIColor(hex: 0x4A4A4A)
+    static var tcCharcoal: UIColor {
+        return UIColor(named: "tcCharcoal")!
     }
     
-    static var tcBackInBlack: UIColor {
-        return UIColor(hex: 0x232A32)
+    static var tcAlmostBlack: UIColor {
+        return UIColor(named: "tcAlmostBlack")!
     }
     
     static var tcMediumBlack: UIColor {
-        return UIColor(hex: 0x262D37)
+        return UIColor(named: "tcMediumBlack")!
     }
     
     static var tcBlueBlack: UIColor {
-        return UIColor(hex: 0x343C49)
+        return UIColor(named: "tcBlueBlack")!
     }
     
-    static var tcGoodVibesGreen: UIColor {
-        return UIColor(hex: 0x59DAA4)
+    static var tcSeafoamGreen: UIColor {
+        return UIColor(named: "tcSeafoamGreen")!
     }
     
     static var tcBlack: UIColor {
-        return UIColor.black
+        return UIColor(named: "tcBlack")!
     }
     
-    static var tcReallyWhite: UIColor {
-        return UIColor.white
+    static var tcWhite: UIColor {
+        return UIColor(named: "tcWhite")!
     }
 }

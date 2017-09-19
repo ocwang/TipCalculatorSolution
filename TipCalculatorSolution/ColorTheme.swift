@@ -14,19 +14,19 @@ struct ColorTheme {
     
     static let light = ColorTheme(isDefaultStatusBar: true,
                                   viewControllerBackgroundColor: .tcOffWhite,
-                                  primaryColor: .tcReallyWhite,
-                                  primaryTextColor: .tcOffBlack,
-                                  secondaryColor: .tcSadBlue,
-                                  accentColor: .tcHotMessPink,
-                                  outputTextColor: .tcBackInBlack)
+                                  primaryColor: .tcWhite,
+                                  primaryTextColor: .tcCharcoal,
+                                  secondaryColor: .tcDarkBlue,
+                                  accentColor: .tcHotPink,
+                                  outputTextColor: .tcAlmostBlack)
     
     static let dark = ColorTheme(isDefaultStatusBar: false,
-                                 viewControllerBackgroundColor: .tcBackInBlack,
+                                 viewControllerBackgroundColor: .tcAlmostBlack,
                                  primaryColor: .tcMediumBlack,
-                                 primaryTextColor: .tcReallyWhite,
+                                 primaryTextColor: .tcWhite,
                                  secondaryColor: .tcBlueBlack,
-                                 accentColor: .tcGoodVibesGreen,
-                                 outputTextColor: .tcReallyWhite)
+                                 accentColor: .tcSeafoamGreen,
+                                 outputTextColor: .tcWhite)
     
     // MARK: - Instance Vars
     
